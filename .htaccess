@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /canapprove-qa/
+
+# Redirect requests without .php to the correct file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+# Remove .php extension from all URLs (force clean URLs)
+RewriteCond %{THE_REQUEST} "\s/([^?]*?)\.php[\s?]" [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Rewrite specific pages inside /pages directory
+RewriteRule ^contact-us/?$ pages/contact-us.php [L,QSA]
+RewriteRule ^about-us/?$ pages/about-us.php [L,QSA]
+RewriteRule ^services/?$ pages/services.php [L,QSA]
+
+# Rewrite education URLs (dynamic pages)
+RewriteRule ^education/([a-zA-Z0-9_-]+)/?$ education.php?page=$1 [L,QSA]
