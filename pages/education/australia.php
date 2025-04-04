@@ -213,5 +213,5 @@ $programs = [
 </div>
 
 </section>
-<?php include 'template/sectionVisaSearch.php'; ?> 
+<?php include 'template/sectionVisaSearch.php'; ?>
         </div>
