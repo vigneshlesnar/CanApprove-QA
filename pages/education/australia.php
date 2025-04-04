@@ -163,7 +163,7 @@ $banner_image = "/canapprove-qa/assets/images/australia-map.svg";
 <?php
 $programs = [
     [
-        "title" => "Diploma Course",
+        "title" => "Diploma Courses",
         "description" => "Require a minimum of 60% in grade 12 and a score of at least 5.5 in the IELTS exam. This exam should be taken only within the 2 years of your course.",
         "image" => "placeholder.png"
     ],
